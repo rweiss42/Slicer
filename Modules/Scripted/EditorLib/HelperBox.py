@@ -276,6 +276,7 @@ class HelperBox(object):
       
       slicer.mrmlScene.RemoveNode( labelNode )
       self.updateStructures()
+      self.select()
     
 
   def deleteStructures(self, confirm=True):
@@ -300,6 +301,7 @@ class HelperBox(object):
     for volumeNode in volumeNodes:
       slicer.mrmlScene.RemoveNode( volumeNode )
     self.updateStructures()
+    self.select()
 
   def mergeStructures(self,label="all"):
     """merge the named or all structure labels into the master label"""
